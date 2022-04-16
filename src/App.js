@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/aboutme" element={<AboutMe></AboutMe>} />
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='confirmbooking' element={
-          <RequireAuth><ConfirmBooking></ConfirmBooking></RequireAuth>
+        <Route path='/confirmbooking/:id' element={
+         <ConfirmBooking></ConfirmBooking>
       
         }></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
