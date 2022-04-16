@@ -1,0 +1,26 @@
+.logos{
+
+    margin: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.logo{
+    margin: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
+  
+    box-shadow:  20px 20px 60px #bebebe,
+                 -20px -20px 60px #ffffff;
+}
+.logo > img {
+    padding: 10px;
+    width: 100px;
+}
+@media only screen and (max-width:768px) {
+    .logos{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+}

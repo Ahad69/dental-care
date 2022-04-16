@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" className="p-3" fixed="top" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to='/' >Sirajganj Dental Care</Navbar.Brand>
+          <Navbar.Brand className="links" as={Link} to='/' ><h3>Sirajganj Dental Care</h3></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className=" toggle" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto ">
