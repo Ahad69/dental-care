@@ -1,11 +1,11 @@
 import React from 'react';
 import './Logos.css'
 
-
 const Logos = () => {
 
     return (
         <div className='logos container pb-5'>
+            
             <div className='logo'>
                 <img src="https://i.ibb.co/HPWwSQ2/pngwing-com-1.png" alt="" />
             </div>

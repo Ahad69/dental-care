@@ -10,11 +10,11 @@ const Service = ({ service }) => {
     navigate(`/confirmbooking/${id}`)
   }
   return (
-    <div className="service">
+    <div className="service  gy-5">
 
         <img src={img} alt="" />
         <h1>{name}</h1>
-        <h3>{price}</h3>
+        <h3>Fees : ${price}</h3>
         <p>{description}</p>
         <button onClick={()=>handleButton(id)}>Book Now</button>
       

@@ -545,15 +545,15 @@ const Banner = () => {
 	  }}
     />
 	<div className="content">
-	<div class="static-txt">Get Treatment For</div>
+	<div className="static-txt">Get Treatment For</div>
 
-    <ul class="dynamic-txts">
+    <ul className="dynamic-txts">
       <li><span>Bad Breath</span></li>
       <li><span>Sensitive Teeth</span></li>
       <li><span>Root Infection</span></li>
       <li><span>Broken Teeth</span></li>
     </ul>
-    <ul class="dynamic-txts2">
+    <ul className="dynamic-txts2">
       <li><span>Breath</span></li>
       <li><span>Teeth</span></li>
       <li><span>Infection</span></li>

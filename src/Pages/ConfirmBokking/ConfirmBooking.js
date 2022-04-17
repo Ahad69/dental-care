@@ -1,35 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import auth from "../../firebase.init";
+
+import "./ConfirmBooking.css";
 
 const ConfirmBooking = () => {
-    const {id} = useParams()
-    const [booking , setBooking] = useState([])
-    useEffect(()=>{
-        fetch('/services.json')
-        .then(res =>  res.json())
-        .then(data => setBooking(data))
-    },[])
+  const [user] = useAuthState(auth);
+  const { id } = useParams();
+  const [booking, setBooking] = useState([]);
+  useEffect(() => {
+    fetch("/services.json")
+      .then((res) => res.json())
+      .then((data) => setBooking(data));
+  }, []);
 
-    const selectedOne = booking.find(book => book.id == id)
-    console.log(selectedOne)
+  const selectedOne = booking.find((book) => book.id == id);
 
-    return (
-        <div>
-            <Card>
-        <Card.Img variant="top" src={selectedOne?.img} />
-        <Card.Body>
-          <Card.Title>{selectedOne?.name}</Card.Title>
-          <h3>{selectedOne?.price}</h3>
-          <Card.Text>
-           {selectedOne?.description}
-          </Card.Text>
-          <Button variant="info">Go somewhere</Button>
-        </Card.Body>
-      </Card>
+
+    const notify = () => {
+        toast(`Thanks ${user?.displayName} for selecting  ${selectedOne?.name} service` );
+          toast.success('You are redirecting to home.', {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
             
-        </div>
-    );
+            });
+        setInterval(function() {window.location = '/'}, 5000);
+    }
+
+
+
+  return (
+    <div className="confirmbooking  pt-5">
+      <img src={selectedOne?.img} alt="" />
+      <h1 className="text-danger mt-4">{selectedOne?.name}</h1>
+      <h3>Fees : ${selectedOne?.price}</h3>
+      <p>{selectedOne?.description}</p>
+
+      <button onClick={() => notify()}>Confirm Booking</button>
+      <ToastContainer  />
+    </div>
+  );
 };
 
 export default ConfirmBooking;
