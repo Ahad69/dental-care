@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 
-import "./ConfirmBooking.css";
+import './Checkout.css'
 
-const ConfirmBooking = () => {
+const Checkout = () => {
   const [user] = useAuthState(auth);
   const { id } = useParams();
   const [booking, setBooking] = useState([]);
@@ -63,7 +63,7 @@ const ConfirmBooking = () => {
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
       
-      <button onClick={() => notify()}>Confirm Booking</button>
+      <button className="ms-2" onClick={() => notify()}>Confirm Booking</button>
     </>
       </div>
      
@@ -72,4 +72,4 @@ const ConfirmBooking = () => {
   );
 };
 
-export default ConfirmBooking;
+export default Checkout;

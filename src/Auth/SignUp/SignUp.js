@@ -35,7 +35,7 @@ const SignUp = () => {
   };
 
             // react firebase hooks 
-            
+
   const [user] = useAuthState(auth);
   const [sendPasswordResetEmail, sending, PasswordError] =
     useSendPasswordResetEmail(auth);
@@ -67,7 +67,7 @@ const SignUp = () => {
 
 
   const notify = () => {
-    toast.success("Password sent to your email", {
+    toast.success("Password sent to your email !. Please check your email.", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: true,
@@ -141,7 +141,7 @@ const SignUp = () => {
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog ">
+        <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">

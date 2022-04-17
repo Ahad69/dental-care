@@ -30,7 +30,7 @@ const Header = () => {
               <ActiveLink className="links"  to='/blogs'>Blogs</ActiveLink>
               
               {
-                user?.email ? <div className=""><button className="btn p-0 ms-5 text-white fw-bold" onClick={logout}>Log Out</button> <img width={40} className='rounded-circle m-auto' src={user?.photoURL} alt="" /></div> : 
+                user?.email ? <div className=""><button className="btn p-0 mb-2 ms-5 text-white fw-bold" onClick={logout}>Log Out</button> <img width={50} className='rounded-circle  m-auto' src={user?.photoURL} alt="" /></div> : 
                   <ActiveLink className="links" as={Link} to='/signin'>Log In</ActiveLink>
                  
                 

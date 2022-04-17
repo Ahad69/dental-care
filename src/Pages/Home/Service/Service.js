@@ -7,7 +7,7 @@ const Service = ({ service }) => {
 
   const handleButton = (event) =>{
    
-    navigate(`/confirmbooking/${id}`)
+    navigate(`/checkout/${id}`)
   }
   return (
     <div className="service  gy-5">

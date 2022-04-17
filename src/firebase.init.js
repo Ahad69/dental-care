@@ -6,19 +6,19 @@ import {getAuth} from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:process.env.REACT_APP_apiKey,
-  authDomain:process.env.REACT_APP_authDomain,
-  projectId:process.env.REACT_APP_projectId,
-  storageBucket:process.env.REACT_APP_storageBucket,
-  messagingSenderId:process.env.REACT_APP_messagingSenderId,
-  appId:process.env.REACT_APP_appId
-  
-  // apiKey: "AIzaSyB2TGJLIVqgZOYM2NhXb3P5cvtuvx48Hos",
-  // authDomain: "dentist-assignment-10.firebaseapp.com",
-  // projectId: "dentist-assignment-10",
-  // storageBucket: "dentist-assignment-10.appspot.com",
-  // messagingSenderId: "811050388461",
-  // appId: "1:811050388461:web:63beee80025228f7d675e4"
+  // apiKey: process.env.REACT_APP_apiKey,
+  // authDomain:process.env.REACT_APP_authDomain,
+  // projectId:process.env.REACT_APP_projectId,
+  // storageBucket:process.env.REACT_APP_storageBucket,
+  // messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  // appId:process.env.REACT_APP_appId
+
+  apiKey: "AIzaSyB2TGJLIVqgZOYM2NhXb3P5cvtuvx48Hos",
+  authDomain: "dentist-assignment-10.firebaseapp.com",
+  projectId: "dentist-assignment-10",
+  storageBucket: "dentist-assignment-10.appspot.com",
+  messagingSenderId: "811050388461",
+  appId: "1:811050388461:web:63beee80025228f7d675e4"
 };
 
 // Initialize Firebase
