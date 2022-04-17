@@ -15,7 +15,7 @@ const Machines = () => {
          <div className='machines container pt-5'>
            
             {
-                machines.map(machine => <Machine machine={machine}></Machine>)
+                machines.map(machine => <Machine machine={machine} key={machine.name}></Machine>)
             }
         </div>
         </>

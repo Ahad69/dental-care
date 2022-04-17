@@ -5,9 +5,7 @@ const Machine = ({machine}) => {
     return (
         <div className='machine container'>
         <img src={img} height={height}  alt="" />
-        <div className='t'>
-            hi
-        </div>
+        
 
     </div>
             

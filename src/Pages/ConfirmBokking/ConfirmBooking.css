@@ -1,8 +1,11 @@
 .confirmbooking{
     margin: 120px  auto  ;
     /* margin: auto auto; */
-    width: 50%;
-    height: 61vh;
+    width: 80%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 20px;
     background: rgb(255, 255, 255);
     box-shadow:  20px 20px 60px #bebebe,
@@ -16,11 +19,45 @@
     padding: 10px 20px;
 }
 
+.booking-content{
+    
+    padding: 10px;
+    width: 40%;
+    margin-bottom: 20px;
+}
+.booking-form{
+    background: rgba(185, 244, 247, 0.187);
+    text-align: left;
+    border-radius: 20px;
+    width: 40%;
+    
+}
+.booking-form input{
+    margin: 10px;
+    width: 100%;
+    padding: 8 10px;
+    border: 0;
+    background: rgba(211, 211, 211, 0.337);
+    border-radius: 10px;
+}
+.booking-form form{
+    padding: 20px;
+}
 .confirmbooking img{
     width: 40%;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:968px){
+
     .confirmbooking{
+        flex-direction: column;
         width: 100%;
+    }
+    .booking-form{
+        width: 90%;
+        margin: 20px;
+    }
+    .booking-content{
+        width: 90%;
+        margin: 20px;
     }
 }
