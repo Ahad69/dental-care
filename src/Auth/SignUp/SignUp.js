@@ -49,7 +49,7 @@ const SignUp = () => {
       let from = location.state?.from?.pathname || "/";
       navigate(from, { replace: true });
     }
-    if(githuberror){
+    if(githuberror || googleError || updateError || error ){
       console.log(githuberror?.message)
     }
 

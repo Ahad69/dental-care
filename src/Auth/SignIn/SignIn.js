@@ -43,9 +43,7 @@ const SignIn = () => {
       </div>
     );
   }
-  if(error || updateerror){
-    console.log(updateerror?.message)
-  }
+  
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -85,7 +83,10 @@ const SignIn = () => {
             <Link to="/signup">Are you new in here ?</Link>
           </button>
         </div>
-
+   
+        {
+             error || updateerror ? `${error?.message}` : ''
+        }
        
         <br />
         <Button className="loginBtn" type="submit">
