@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='mt-5'>
             <footer>
-                <h1>Sirajganj Dental Care</h1>
+                <h1>Ahad Dental Care</h1>
                 &copy; Copyright  {yearNow}
             </footer>
         </div>

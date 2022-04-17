@@ -18,3 +18,18 @@
 .btn a{
     text-decoration: none;
 }
+
+
+.google {
+    margin: 8px 8px 0 0;
+   background: rgb(149, 239, 234) !important;
+}
+.facebook {
+    margin: 8px 8px 0 0;
+   
+}
+.github{
+    margin:   8px  8px 0 0;
+    color: #ffffff;
+   background: rgb(0, 0, 0) !important;
+}

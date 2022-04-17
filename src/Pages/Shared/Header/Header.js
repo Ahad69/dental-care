@@ -19,7 +19,7 @@ const Header = () => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" className="p-3" fixed="top" variant="dark">
         <Container>
-          <Navbar.Brand className="links" as={Link} to='/' ><h3>Sirajganj Dental Care</h3></Navbar.Brand>
+          <Navbar.Brand className="links" as={Link} to='/' ><h3>Ahad Dental Care</h3></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className=" toggle" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto ">
@@ -27,7 +27,7 @@ const Header = () => {
               <Nav.Link className="links" as={Link} to='/blogs'>Blogs</Nav.Link>
               
               {
-                user?.email ? <><button className="btn text-white fw-bold" onClick={logout}>Log Out</button> <img width={50} className='rounded-circle m-auto' src={user?.photoURL} alt="" /></> : 
+                user?.email ? <><button className="btn text-white fw-bold" onClick={logout}>Log Out</button> <img width={40} className='rounded-circle m-auto' src={user?.photoURL} alt="" /></> : 
                   <Nav.Link className="links" as={Link} to='/signin'>Log In</Nav.Link>
                  
                 

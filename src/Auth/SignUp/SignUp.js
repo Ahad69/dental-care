@@ -1,8 +1,8 @@
-import { async } from '@firebase/util';
+
 import React, { useState } from 'react';
 import { Button, Form } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const SignUp = () => {
@@ -10,9 +10,10 @@ const SignUp = () => {
     const [photoURL , setPhotoURL] = useState('')
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
-
-    const navigate = useNavigate()
     
+    let location = useLocation();
+    const navigate = useNavigate()
+
     const handledisplayName = (e) =>{
         setdisplayName(e.target.value)
     }
@@ -25,10 +26,13 @@ const SignUp = () => {
     const handlePassword = (e) =>{
         setPassword(e.target.value)
     }
+    const [user] = useAuthState(auth);
+    const [signInWithGithub, githubuser, githubloading, githuberror] = useSignInWithGithub(auth);
+    const [signInWithGoogle, googleUser, gooogleLoading, googleError] = useSignInWithGoogle(auth);
 
     const [
         createUserWithEmailAndPassword,
-        user,
+        newUser,
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification : true});
@@ -40,15 +44,18 @@ const SignUp = () => {
         await updateProfile({ displayName : displayName , photoURL : photoURL });
         navigate('/')
     }
-
-    if(user){
-        console.log(user)
-    }
     
+    if (user) {
+      let from = location.state?.from?.pathname || "/";
+      navigate(from, { replace: true });
+    }
+    if(githuberror){
+      console.log(githuberror?.message)
+    }
 
     return (
         <div className="signin">
-        <h1 className="text-center fw-bold pb-5">Register</h1>
+        <h1 className="text-center fw-bold pb-2">Register</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Your Name </Form.Label>
@@ -71,21 +78,24 @@ const SignUp = () => {
         <button className="btn text-primary">Forgot Password ?</button> <br />
         <button className='btn'><Link to='/signin'>Already Registered  ?</Link></button>
         </div>
-        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group> */}
-        <br />
+        
         {
              error ? 'error?.message' : ''
         }
-        <br />
+        
         <Button className="registerBtn" type="submit">
           {
               updating ? 'Creating User' : 'Register'
           }
         </Button>
       </Form>
-      
+          <div className=''>
+            <button onClick={()=>signInWithGoogle()} className='btn google'>google</button>
+
+           <button onClick={()=>signInWithGithub()} className='btn github text-white'>GitHub</button>
+
+           {/* facebook wont work  */}
+            <button className='btn bg-primary facebook text-white'>Facebook</button> </div>
       </div>
     );
 };

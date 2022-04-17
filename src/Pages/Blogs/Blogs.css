@@ -1,0 +1,48 @@
+.blogs-first{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.top-tilte{
+    margin-top: 100px;
+}
+.authorization{
+    text-align: left;
+}
+
+.authentication{
+    text-align: left;
+}
+.options li{
+list-style: none;
+}
+.firebase-content{
+    display: flex;
+    justify-content: center;
+  text-align: left;
+}
+.firebase-content img{
+    width: 50%;
+    height: 400px;
+}
+.options{
+   
+    font-size: 25px;
+   
+}
+.third-blogs{
+    text-align: left;
+}
+
+@media only screen and (max-width:768px) {
+    .blogs-first{
+        flex-direction: column;
+    }
+    .firebase-content{
+        flex-direction: column-reverse;
+    }
+    .firebase-content img{
+        width: 100%;
+        height: 400px;
+    }
+}

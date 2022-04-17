@@ -11,6 +11,7 @@
 }
 .machine img{
     width: 300px;
+    border-radius: 20px;
     box-shadow:  20px 20px 60px #bebebe,
     -20px -20px 60px #ffffff;
 
@@ -20,10 +21,7 @@
     -20px -20px 60px #bebebe;
 }
 
-/* .machine{
-    box-shadow:  20px 20px 60px #bebebe,
-                 -20px -20px 60px #ffffff;
-} */
+
 @media only screen and (max-width:968px) {
     .machines{
         display: grid;
