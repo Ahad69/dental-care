@@ -1,0 +1,10 @@
+.about{
+    margin-top: 100px;
+    display: flex;
+    text-align: left;
+}
+@media only screen and (max-width:968px) {
+    .about{
+        flex-direction: column;
+    }
+}
