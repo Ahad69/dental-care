@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Machine from '../Machine/Machine';
+import './Machines.css'
 
 const Machines = () => {
     const [machines , setMachines] = useState([])
@@ -8,12 +10,16 @@ const Machines = () => {
         .then(data => setMachines(data))
     },[])
     return (
-        <div>
-            <h1>{machines.length}</h1>
+        <>
+         <h1>Machines </h1>
+         <div className='machines container pt-5'>
+           
             {
-
+                machines.map(machine => <Machine machine={machine}></Machine>)
             }
         </div>
+        </>
+       
     );
 };
 

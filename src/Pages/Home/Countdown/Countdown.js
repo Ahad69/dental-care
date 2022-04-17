@@ -5,7 +5,7 @@ import './Countdown.css'
 
 const Countdown = () => {
     return (
-        <div className='mt-5 pt-5'>
+        <div className='mt-5 pt-5 pb-5'>
             <h1>In 2022 </h1>
             <div className='counts container pb-5'>
 
