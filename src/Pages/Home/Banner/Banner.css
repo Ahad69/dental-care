@@ -49,7 +49,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: #343F4F;
+    background: rgb(26, 25, 25);
     border-left: 2px solid #FC6D6D;
     animation: typing 3s steps(10) infinite;
   }
@@ -110,7 +110,7 @@
       left: 0;
     }
   }
-  @media only screen and (max-width:568px) {
+  @media only screen and (max-width:968px) {
     .static-txt{
         color: #fff;
         font-size: 40px;
