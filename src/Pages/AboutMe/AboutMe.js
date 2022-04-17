@@ -22,7 +22,13 @@ const AboutMe = () => {
                     - Doctor of dental surgery (DDS) <br />
                     - Doctor of medical dentesty (DMD)
                 </p>
-                <p>A dentist, also known as a dental surgeon, is a health care professional who specializes in dentistry. The dentist's supporting team aids in providing oral health services. The dental team includes dental assistants, dental hygienists, dental technicians, and sometimes dental therapists.</p>
+                <p>
+                    <strong>My goal in 2022</strong> <br />
+                    I always want to be one of the best web developer in Banglasesh.
+                    I know it's too hard, but I will get it at any cost. I have already started my journey with my favourite web developer <a href="https://www.facebook.com/groups/1037755250105291/user/686386890" className='a'>Jhankar Mahbub</a> sir . I am a hard working person. I am working to fulfil my dream. <br />
+                    <br />
+                    I want a job in USA 😀. Also sattle in that country. It's all my dream. 
+                </p>
            </div>
         </div>
     );
