@@ -8,19 +8,20 @@ const AboutMe = () => {
 
            <div className="about-content m-5">
                 <h1>Name : Ahad Hossain</h1>
-                <h4>Profession : Dentist.</h4>
+                <h4>Profession : Web Developer jr.</h4>
                 <p>
                     <strong>Education</strong>
                     <br />
-                    -4 years education from collage. <br />
-                    -3 years of dental school training. <br />
+                    Accoungting Hons 3rd year <br />
+                    Sirajgonj Govt. Collage <br />
                     
                 </p>
                 <p>
-                    <strong>Degrees</strong>
+                    <strong>Achievements</strong>
                     <br />
-                    - Doctor of dental surgery (DDS) <br />
-                    - Doctor of medical dentesty (DMD)
+                    HSC - Golden A+  <br />
+                    SSC - Golden A+  <br />
+                    JSC - Golden A+  <br />
                 </p>
                 <p>
                     <strong>My goal in 2022</strong> <br />
